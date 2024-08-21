@@ -2,9 +2,13 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
     <div class="container-fluid">
       <!-- Navbar brand -->
-      <a class="navbar-brand" href="#">
-        <img src="/src/assets/livre.png" height="40" alt="MDB Logo" loading="lazy" />
-      </a>
+       <div class="navbar">
+        <a class="navbar-brand" href="#">
+          <img src="/src/assets/livre.png" height="40" alt="MDB Logo" loading="lazy" />
+        </a>
+        <h1>BIBLIOTHEQUE</h1>
+       </div>
+      
 
       <!-- Toggle button for mobile view -->
       <button
@@ -19,17 +23,17 @@
       </button>
 
       <!-- Collapsible content -->
-      <div :class="['collapse', 'navbar-collapse', { show: isNavbarVisible }]" id="navbarSupportedContent">
+      <div :class="['collapse', 'navbar-collapse ', { show: isNavbarVisible }]" id="navbarSupportedContent ">
         <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/Livre">Livre</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/Membres">Membres</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/Prets">Préts</RouterLink>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center w-100">
+          <li class="nav-item d-flex ">
+            <RouterLink class="nav-link " to="/Livre">Gestion Livre</RouterLink>
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+            <RouterLink class="nav-link" to="/Membres">Gestion Membres</RouterLink>
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+            <RouterLink class="nav-link" to="/Prets">Gestion Préts</RouterLink>
           </li>
         </ul>
       </div>
@@ -90,9 +94,18 @@ body {
 
 .nav-link {
   color: #030303;
-  font-size: large;
+  font-size: 20px;
   font-weight: bold;
+  margin: 20px;
+  
 }
+.navbar-brand img{
+  margin-left: 40px;
+}
+.navbar-brand h1{
+  color:#7d7f24
+}
+
 
 .carousel-item {
   height: 40vh;
